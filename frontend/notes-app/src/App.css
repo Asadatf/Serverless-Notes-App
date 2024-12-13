@@ -1,0 +1,567 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Reset margins, paddings, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Single Body Style */
+body {
+  min-height: 100vh;
+  background-color: #080710;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./assets/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------------- */
+/*                    LOGIN / REGISTER STYLES              */
+/* -------------------------------------------------------- */
+
+/* Form Box Styles */
+.form-box {
+  position: relative;
+  width: 420px;
+  background: transparent;
+  border-radius: 10px;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 20px 30px;
+}
+
+/* Form Heading */
+form h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+/* Input Field */
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+/* Remember-Me / Forgot Password Links */
+form .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+  accent-color: #fff;
+  margin-right: 4px;
+}
+
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+form button {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  color: #080710;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #080710;
+  color: #ffffff;
+}
+
+/* Register Link */
+form .register-link,
+form .login-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register-link p a,
+.login-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover,
+.login-link p a:hover {
+  text-decoration: underline;
+}
+
+/* Error Messages */
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid red;
+  color: red;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* -------------------------------------------------------- */
+/*                        User Profile                      */
+/* -------------------------------------------------------- */
+
+.pic-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  margin-top: 10px; /* Optional: Adds space above the image */
+}
+
+form h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+form label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#file-upload {
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------- */
+/*                        NOTES STYLES                     */
+/* -------------------------------------------------------- */
+
+/* Notes Container */
+.notes {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  padding: 100px 0px;
+}
+
+/* Individual Note Styling */
+.note {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: inset -6px -4px 2px rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1.5px solid rgba(255, 255, 255, 0.326);
+  color: #fff;
+  padding: 15px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+  overflow: hidden;
+  position: relative;
+}
+
+.note-title {
+  color: #ff6f61;
+  margin-bottom: 5px;
+}
+
+.note-body {
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note-body ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.note-body ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.note-body blockquote {
+  padding-left: 20px;
+  border-left: 4px solid #ccc;
+  margin-left: 0;
+  font-style: italic;
+}
+
+.note_footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.note textarea {
+  border: 1.5px solid rgba(255, 255, 255, 0.326);
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  resize: none;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.note textarea.title {
+  height: 40px;
+  color: #ff6f61;
+  margin-bottom: 0;
+}
+
+.note textarea.content {
+  height: 100px;
+}
+
+.note textarea:focus {
+  outline: none;
+}
+
+.note textarea.title::placeholder {
+  color: #ff6f61;
+}
+
+.note textarea.content::placeholder {
+  color: #fff;
+}
+
+/* Note Action Button */
+.note_footer span {
+  cursor: pointer;
+  padding: 1px;
+  border-radius: 50%;
+  color: #333;
+}
+
+.note_save {
+  background: transparent;
+  transition: 0.1s ease-in-out;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.note_save:hover {
+  background: #ffffff;
+  border: 1.5px solid #ffffff;
+  color: #080710;
+}
+
+/* Responsive Layout for Notes */
+@media screen and (max-width: 900px) {
+  .notes {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .notes {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+}
+
+/* -------------------------------------------------------- */
+/*                        Tip Tap                           */
+/* -------------------------------------------------------- */
+
+.ProseMirror {
+  border: 1.5px solid rgba(255, 255, 255, 0.326);
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  resize: none;
+  width: auto;
+  margin: 0;
+  height: 70px;
+  overflow-y: auto;
+  line-height: 1;
+}
+
+.ProseMirror:focus {
+  border: none;
+  outline: 1px solid #ff6f61;
+}
+
+.ProseMirror > * + * {
+  margin: 0;
+}
+
+.ProseMirror br {
+  line-height: 1;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding: 0 2rem;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+  line-height: 1;
+}
+
+.ProseMirror code {
+  background-color: rgba(#616161, 0.1);
+  color: #616161;
+}
+
+.ProseMirror pre {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: "JetBrainsMono", monospace;
+  /* padding: 0.75rem 1rem; */
+  border-radius: 0.5rem;
+}
+.ProseMirror code {
+  color: inherit;
+  padding: 0;
+  background: none;
+  font-size: 0.8rem;
+}
+
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ProseMirror blockquote {
+  padding-left: 1rem;
+  border-left: 3px solid #999999;
+}
+
+.ProseMirror hr {
+  border: none;
+  border-top: 3px solid #999999;
+  margin: 2rem 0;
+}
+
+.menuBar {
+  height: 20px;
+  padding-bottom: 0px;
+  margin: 5% 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menuBar button {
+  font-size: 10px;
+  height: 20px !important;
+  width: 20px !important;
+  margin-left: 2px;
+}
+
+/* -------------------------------------------------------- */
+/*                     NAVBAR STYLES                      */
+/* -------------------------------------------------------- */
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  z-index: 100;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.header:hover::before {
+  left: 100%;
+}
+
+/* Logo Styling */
+.logo {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* Navbar Links */
+.navbar {
+  margin-left: auto;
+}
+
+.navbar-link {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}
+
+/* Button inside Navbar */
+button.navbar-link {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.navbar-link:hover {
+  text-decoration: underline;
+}
+
+/* Username in Navbar */
+.navbar-username {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Menu Icon */
+#menu-icon {
+  font-size: 36px;
+  color: #fff;
+  display: none;
+}
+
+.logo:hover,
+.navbar-username:hover {
+  color: #ff6f61;
+  cursor: pointer;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Layout for Navbar */
+@media (max-width: 992px) {
+  .header {
+    padding: 1.25rem 4%;
+  }
+}
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 4%;
+    display: none;
+    z-index: 100;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar-link {
+    display: block;
+    margin: 1.5rem 0;
+  }
+  .nav-bg {
+    position: absolute;
+    top: 79px;
+    left: 0;
+    width: 100%;
+    height: 295px;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    display: none;
+  }
+  .nav-bg.active {
+    display: block;
+  }
+}

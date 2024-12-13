@@ -1,0 +1,43 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "chai": "^5.1.2",
+    "chai-http": "^5.1.1",
+    "concurrently": "^9.0.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "dotenv-flow": "^4.1.0",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mocha": "^10.8.2",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.0",
+    "nodemailer": "^6.9.16",
+    "path": "^0.12.7",
+    "pino": "^9.5.0",
+    "pino-pretty": "^13.0.0",
+    "serverless-http": "^3.2.0",
+    "url": "^0.11.4",
+    "validator": "^13.12.0"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start-dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test-notes": "cross-env NODE_ENV=test mocha --timeout 5000 ./test/notes.test.js --exit",
+    "test-user": "cross-env NODE_ENV=test mocha --timeout 5000 ./test/user.test.js --exit",
+    "sonar": "npx sonar-scanner"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^6.0.0",
+    "sonar-scanner": "^3.1.0"
+  }
+}
